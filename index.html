@@ -1,10 +1,138 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Gipa Me</title>
-</head>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Normal Scrolling - fullPage.js</title>
+	
+    <!--dont' forget to UPDATE -->
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+    <meta name="author" content="" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<meta name="Resource-type" content="Document" />
+
+	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+	
+	/* Style for our header texts 
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;	
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+	
+	/* Centered texts in each section 
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+
+	<script type="text/javascript" src="scripts/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="scripts/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="scripts/examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				menu: '#menu',
+				anchors: ['sandro', 'nukri', 'mirian', 'vaxo', 'kids', 'levani', 'contact'],
+				slidesColor: ['#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA','#E8E9EA'],
+				autoScrolling: false
+			});
+		});
+	</script>
+
+</head>
 <body>
+
+
+
+<ul id="menu">
+	<li data-menuanchor="sandro" class="active"><a href="#sandro">sandro</a></li>
+	<li data-menuanchor="nukri"><a href="#nukri">nukri</a></li>
+	<li data-menuanchor="mirian"><a href="#mirian">mirian</a></li>
+    <li data-menuanchor="vaxo"><a href="#vaxo">vaxo</a></li>
+    <li data-menuanchor="kids"><a href="#kids">kids</a></li>
+    <li data-menuanchor="levani"><a href="#levani">levani</a></li>
+    <li data-menuanchor="contact"><a href="#contact">contact</a></li>
+</ul>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<img src="imgs/1.png"  alt="1"/>
+			<h1>Sandro</h1>
+			<p>With a linked menu</p>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>nukri</h1>
+				<p>
+					Easy to bookmark and share
+				</p>
+			</div>
+		</div>
+		
+	    <div class="slide" id="slide2">
+			<h1>mirian</h1>
+			<img src="imgs/iphone-blue.png" alt="iphone" id="iphone-two" />
+		</div>
+
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>vaxo</h1>
+			<p>autoScrolling:false</p>
+		</div>
+	</div>
+    	<div class="section" id="section4">
+		<div class="intro">
+			<h1>kids</h1>
+			<p>autoScrolling:false</p>
+		</div>
+	</div>
+    	<div class="section" id="section5">
+		<div class="intro">
+			<h1>levani</h1>
+			<p>autoScrolling:false</p>
+		</div>
+	</div>
+<div class="section" id="section6">
+		<div class="intro">
+			<h1>contact</h1>
+			<p>autoScrolling:false</p>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
