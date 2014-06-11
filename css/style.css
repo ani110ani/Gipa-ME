@@ -167,7 +167,6 @@ h6 {
 .navigation li:hover,.active {
 	font-size:20px;
 	cursor:pointer;
-	background-color: red;
 }
 
 /*.navigation .icon-lecturer:hover {
