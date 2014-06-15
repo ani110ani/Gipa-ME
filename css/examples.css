@@ -130,7 +130,10 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
-
+svg { 
+	max-width: 100%;
+	width: 100%;
+}
 /* Custom CSS
  * --------------------------------------- */
  
@@ -158,6 +161,11 @@ body{
 	margin-right: auto;
 	width: 960px;
 	position: relative;
+	margin-top: -10%; /* leave it so? */
+}
+
+.wrapFade{
+	display: inline;
 }
 
 h1 {
@@ -362,9 +370,10 @@ p {
 
 .button {
 	display: inline-block;
-	width: 32.5%;
-	padding: 2em 2em 0em 2em;
-	cursor: pointer;
+	position: relative;
+	width: 22%;
+	margin: 2em 5% 0em 5%;
+	cursor: pointer;	
 }
 
 /* Section Home */
@@ -397,6 +406,15 @@ p {
 	bottom: 3%;
 }
 
+#section1 .wrapRight {
+	background-color: #C8E4C2;
+}
+
+#section2 .wrapRight {
+	background-color: #E2CFC3;
+}
+
+
 /*Section All (exept Home and Contact) */
 .wrapRight{
 	float: right;
@@ -406,7 +424,6 @@ p {
 	position: absolute;
 	padding: 1em;
 	border-radius: 10px;
-	background-color: #C8E4C2;
 }
 
 .wrapLeft{
@@ -437,8 +454,34 @@ p {
 
 .webMore {
 	display: none;
-	position: relative;
-	background: url("../media/svg/background_web.svg") no-repeat top left;
+	position: absolute;
+	background: url("../media/svg/background-01.svg") no-repeat top left;
+	background-size: cover;
+	padding: 1em 0 1em 2em;
+/*	background-color: red;*/
+	border-radius: 20px;
+	color: #C8E4C2;
+	width: 100%;
+	margin-top: -10px;
+}
+
+.mobMore {
+	display: none;
+	position: absolute;
+	background: url("../media/svg/background-02.svg") no-repeat top left;
+	background-size: cover;
+	padding: 1em 0 1em 2em;
+/*	background-color: red;*/
+	border-radius: 20px;
+	color: #C8E4C2;
+	width: 100%;
+	margin-top: -10px;
+}
+
+.bookMore {
+	display: none;
+	position: absolute;
+	background: url("../media/svg/background-03.svg") no-repeat top left;
 	background-size: cover;
 	padding: 1em 0 1em 2em;
 /*	background-color: red;*/
@@ -449,10 +492,29 @@ p {
 }
 
 
-.red {
+/*.red {
 	fill: #E9EAEB;
+}*/
+
+/*.red:hover {
+	fill: #D56161!important; 
+}*/
+
+
+.svg  {
+	width:100%; 
+	height:100%;
+
 }
 
-.red:hover {
-	fill: red; 
+.clickedred {
+	fill: #D56161 !important; 
+}
+
+.clickedgreen {
+	fill: #6C9C6D !important; 
+}
+
+.clickedlila {
+	fill: #947991 !important; 
 }
