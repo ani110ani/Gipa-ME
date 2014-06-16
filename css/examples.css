@@ -205,44 +205,38 @@ p {
 	font-size: 1.5em;
 }
 
-
 #menu li {
 	display:block;
 	-webkit-transition: all .2s ease-in-out;
+	width: 50%;
+	/*background-color: green;*/
+	margin-left: 25%;
+
 }
 #menu li.active {
-	background:#666;
-	background: rgba(0,0,0, 0.5);
-	color: #fff;
+	width: 70%;
+	margin-left: 15%;
 }
-#menu li a {
-	text-decoration:none;
-	color: #000;
-}
-#menu li.active a:hover {
-	color: #000;
-}
+
+
 #menu li:hover {
-	background: rgba(255,255,255, 0.8);
+	width: 70%;
+	margin-left: 15%;
 }
 #menu li a,
 #menu li.active a{
-	padding: 9px 18px;
 	display:block;
 }
-#menu li.active a{
-	color: #fff;
-	font-size: 1.5em;
-}
+
 #menu {
 	position:fixed;
 	top:0;
-	right:1em;
+	right:0em;
 	z-index: 70;
 	width: 10%;
 	padding: 0;
 	margin:0;
-	text-align: center;	
+	/*background-color: red;*/
 }
 
 .twitter-share-button{
@@ -412,6 +406,39 @@ p {
 
 #section2 .wrapRight {
 	background-color: #E2CFC3;
+}
+
+#section3 .wrapRight {
+	background-color: #C3C2E1;
+}
+
+#section4 .wrapRight {
+	background-color: #E1DEC3;
+}
+
+#section5 .wrapRight {
+	background-color: #D7C4C9;
+}
+
+#section5 .wrapLeft{
+	width: 55%;
+}
+
+#section5 .name {
+	display: inline-block;
+	width: 100%;
+}
+
+#section6 .wrapRight {
+	background-color: #BCC9CA;
+}
+
+#section7 .scroll {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+/*	background-color: blue;*/
+	bottom: 20%;
 }
 
 
