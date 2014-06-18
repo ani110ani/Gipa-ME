@@ -130,7 +130,13 @@ q:before,q:after {
 abbr,acronym { border: 0;
 }
 
-svg { 
+svg  { top:0; left:0; width:100%; height:100%;  background:green; }
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+img { 
 	max-width: 100%;
 	width: 100%;
 }
@@ -159,13 +165,16 @@ body{
 .wrap{
 	margin-left: auto;
 	margin-right: auto;
-	width: 960px;
+/*	width: 960px;*/
+	width: 100%;	
 	position: relative;
 	margin-top: -10%; /* leave it so? */
 }
 
-.wrapFade{
-	display: inline;
+
+/*experimenting for IE */
+.wrapFade {
+display: inline;
 }
 
 h1 {
@@ -205,23 +214,27 @@ p {
 	font-size: 1.5em;
 }
 
+
 #menu li {
 	display:block;
-	-webkit-transition: all .2s ease-in-out;
-	width: 50%;
+	width: 40%;
 	/*background-color: green;*/
-	margin-left: 25%;
+	margin-left: 30%;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all .0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 
 }
 #menu li.active {
-	width: 70%;
-	margin-left: 15%;
+	width: 56%;
+	margin-left: 22%;
 }
 
 
 #menu li:hover {
-	width: 70%;
-	margin-left: 15%;
+	width: 56%;
+	margin-left: 22%;
 }
 #menu li a,
 #menu li.active a{
@@ -238,7 +251,6 @@ p {
 	margin:0;
 	/*background-color: red;*/
 }
-
 .twitter-share-button{
 	position: fixed;
 	z-index: 99;
@@ -364,16 +376,25 @@ p {
 
 .button {
 	display: inline-block;
-	position: relative;
+/*	position: relative;*/
 	width: 22%;
 	margin: 2em 5% 0em 5%;
 	cursor: pointer;	
 }
 
+/*.positioning {
+	display: block;
+	position: relative;
+	width: 32%;
+	position: absolute;
+	height: 32%;	
+}*/
+
+
 /* Section Home */
 #section0 .logo {
 	display: inline-block;
-	width: 15%;
+	width: 10%;
 	margin: 1em;
 }
 
@@ -404,24 +425,47 @@ p {
 	background-color: #C8E4C2;
 }
 
+#sandro-02 {
+	display: none;
+}
+
+
 #section2 .wrapRight {
 	background-color: #E2CFC3;
+}
+
+#section2 #nukri-02 {
+	display: none;
 }
 
 #section3 .wrapRight {
 	background-color: #C3C2E1;
 }
 
+#section3 #mirian-02 {
+	display: none;
+}
+
+
 #section4 .wrapRight {
 	background-color: #E1DEC3;
 }
+
+#section4 #vaxo-02 {
+	display: none;
+}
+
 
 #section5 .wrapRight {
 	background-color: #D7C4C9;
 }
 
-#section5 .wrapLeft{
+#section5 .wrapLeft {
 	width: 55%;
+}
+
+#section5 #its-02 {
+	display: none;
 }
 
 #section5 .name {
@@ -431,6 +475,10 @@ p {
 
 #section6 .wrapRight {
 	background-color: #BCC9CA;
+}
+
+#section6 #levan-02 {
+	display: none;
 }
 
 #section7 .scroll {
@@ -458,6 +506,10 @@ p {
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
+}
+
+.test {
+ackground-color: red;
 }
 
 .logo {
@@ -530,8 +582,6 @@ p {
 
 .svg  {
 	width:100%; 
-	height:100%;
-
 }
 
 .clickedred {

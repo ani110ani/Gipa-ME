@@ -4,9 +4,23 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<title>Gipa Me</title>
-    
-    <link rel="icon" type="image/png" href="favicon.png">
-	<!--[if IE]><link rel="shortcut icon" href="/favicon.ico><![endif]-->
+   <!-- favicon --> 
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+    <!--[if IE]><link rel="shortcut icon" href="favicon/favicon.ico"><![endif]-->
+    <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="favicon/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#E8E9EA">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
 	
     <meta name="author" content="" />
 	<meta name="description" content="" />
@@ -27,7 +41,19 @@
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/examples.js"></script>
+<script>
+if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+  console.log('it is mac');
+} else {
+  console.log('it is win Compiter');
+}
+
+
+
+
+</script>
+
+
 
    
 	<script type="text/javascript">
@@ -36,7 +62,92 @@
 				slidesColor: ['#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA', '#E8E9EA'],
 				anchors: ['home', 'sandro', 'nukri', 'mirian', 'vaxo', 'its', 'levan', 'contact'],
 				menu: '#menu',
-				scrollingSpeed: 1700
+				scrollingSpeed: 1200, 
+				'onLeave': function(index, newIndex, direction){
+					if (index == 2 && direction == 'down'){
+						console.log (index=2);
+						console.log ('sandro was scrolled down');
+						$("#sandro-01").fadeOut(800);
+						$("#sandro-02").fadeIn(800);
+						
+					}
+					else if (index == 3 && direction == 'up'){
+						console.log (index=3);
+						console.log ('it was scrolled up to sandro');
+						$("#sandro-01").fadeIn(800);
+						$("#sandro-02").fadeOut(800);
+						
+					}
+					else if (index == 3 && direction == 'down'){
+						console.log (index=3);
+						console.log ('nukris was scrolled down');
+						$("#nukri-01").fadeOut(800);
+						$("#nukri-02").fadeIn(800);
+						
+					}
+					else if (index == 4 && direction == 'up'){
+						console.log (index=4);
+						console.log ('it was scrolled up to nukri');
+						$("#nukri-01").fadeIn(800);
+						$("#nukri-02").fadeOut(800);
+					}
+					else if (index == 4 && direction == 'down'){
+						console.log (index=4);
+						console.log ('mirian was scrolled down');
+						$("#mirian-01").fadeOut(800);
+						$("#mirian-02").fadeIn(800);
+						
+					}
+					else if (index == 5 && direction == 'up'){
+						console.log (index=5);
+						console.log ('it was scrolled up to mirian');
+						$("#mirian-01").fadeIn(800);
+						$("#mirian-02").fadeOut(800);
+					}
+					else if (index == 5 && direction == 'down'){
+						console.log (index=5);
+						console.log ('vaxo was scrolled down');
+						$("#vaxo-01").fadeOut(800);
+						$("#vaxo-02").fadeIn(800);
+						
+					}
+					else if (index == 6 && direction == 'up'){
+						console.log (index=6);
+						console.log ('it was scrolled up to vaxo');
+						$("#vaxo-01").fadeIn(800);
+						$("#vaxo-02").fadeOut(800);
+					}
+					else if (index == 6 && direction == 'down'){
+						console.log (index=6);
+						console.log ('its was scrolled down');
+						$("#its-01").fadeOut(800);
+						$("#its-02").fadeIn(800);
+						
+					}
+					else if (index == 7 && direction == 'up'){
+						console.log (index=7);
+						console.log ('it was scrolled up to its');
+						$("#its-01").fadeIn(800);
+						$("#its-02").fadeOut(800);
+						
+					}
+					else if (index == 7 && direction == 'down'){
+						console.log (index=7);
+						console.log ('levan was scrolled down');
+						$("#levan-01").fadeOut(800);
+						$("#levan-02").fadeIn(800);
+						
+					}
+					else if (index == 8 && direction == 'up'){
+						console.log (index=8);
+						console.log ('it was scrolled up to levan');
+						$("#levan-01").fadeIn(800);
+						$("#levan-02").fadeOut(800);
+						
+					}
+
+
+				}
 			});
 			
 		});
@@ -44,6 +155,7 @@
     
     
 	<script>
+<!--bouncing scroll button	-->
 		$.fn.exBounce = function () {
 			var self = this;
 			(function runEffect() {
@@ -63,29 +175,38 @@
     
     
     <script>
+<!--on cklick show more info-->	
   $(document).ready(function () {
     $(".button").click(function () {
         $(this).next("div").fadeToggle('fast');
 /*       $('.red').animate({ svgFill: '#D46161' }, 2000);*/
-        $(this).parent().siblings().children().next().hide();
-          return false;
+        $(this).parent().siblings().children().next().hide(); 
+		  return false;
     });
 	
 	
-
-  $("#section1").scroll(function(){
-    $('.wrapLeft').attr('src','media/svg/sandro-02.svg');
+<!--scroll function-->
 
 
-});
+
+//$('#section1').bind('mousewheel', function(event) {
+//    if (event.originalEvent.wheelDelta >= 0) {
+//        console.log('Scroll up');
+//    }
+//    else {
+//        console.log('Scroll down');
+//    }
+//});
+
+
 	
 
+<!--positioning the fixed navigation verticali middle-->
 function initialize() {
    var divH = $('#menu').innerHeight()/2;
    var pageH = $(window).innerHeight()/2;
   $('#menu').css({top: (pageH-divH)});
 }
-
 initialize();
 
 $(window).on('resize',function(){
@@ -94,11 +215,6 @@ $(window).on('resize',function(){
 
 	
   });
-	
-	
-
-	
-
     </script>
 
 </head>
@@ -128,7 +244,7 @@ $(window).on('resize',function(){
             <h3>კურსის ფარგლებში გათვალისწინებულია:</h3><br/> 
             <h4>1. სტიპენდიები წარჩინებული სტუდენტებისათვის</h4><br/>
             <h5>2. &nbsp;უცხოელი ლექტორები ჩაატარებენ მოკლე პრაქტიკულ კურსებს</h5><br/>
-            <h6>3. &nbsp;მე-3 და მე-4 სემესტრის განმავლობაში სტუდენტები გაივლიან სტაჟრებას</h6>
+            <h6>3. მე-3 და მე-4 სემესტრის განმავლობაში სტუდენტები გაივლიან სტაჟირებას</h6>
 		
         
         <div class="scroll"><h2>ლექტორები</h2>და მათი ნამუშევრები
@@ -155,7 +271,7 @@ $(window).on('resize',function(){
 			<div class="contact">
 				<div class='wrapFade'>
                   <div class="button">
-	<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
+						<svg class="svg" viewBox="0 396 612 186" preserveAspectRatio="xMinYMin meet">
 	<path class="red" fill="#E9EAEB" d="M31,417.1c-29.9,15.5-49.7,130.1-0.8,144.2c69.1,19.8,280,6.7,332.6,6.7c89.8,0,275,49.1,246.2-95.5c-20.5-103-176-62.2-271.1-62.1C234.8,410.7,61,401.6,31,417.1z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M51.7,467.5c0,5.3-0.5,10.4-0.5,15.7c0,7.2-0.4,10.8,6.8,13c6.4,1.9,13.9,1.5,20.5,1.9c6.3,0.3,12.4,1.8,19.1,1.4c-0.1-4.9,1.5-10.1,1.5-15.1c0-5.4,0.3-11-0.1-16.4c-7.5-3.3-16.5-3.5-24.7-3.5C70.7,464.7,51.2,461.4,51.7,467.5z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M45.9,456c-2,3.1,0,10.9-0.9,14.9c-0.9,4.1-1.2,7.2-1.4,11.5c-0.4,6.7-2.3,13-1.8,20.1c4.3,2.3,10.5,0.7,15.1,1c7.7,0.6,15.2,3.5,23.1,3.9c8.4,0.4,16.6,0.6,25.1,0.5c1.5-3.6,1.3-11.1,1.4-15c0.1-4.1,0.6-7.8,0.9-11.8c0.7-6.6,1.1-13.2,0.9-20.1c-5.7-1.6-11-3.4-16.9-4c-5.9-0.6-11.9,0.5-17.8-0.6C65.3,454.9,54,452.3,45.9,456"/>
@@ -186,8 +302,8 @@ $(window).on('resize',function(){
                   </div>
                <div class='wrapFade'>
                    <div class="button">
-                   <svg version="1.1" class="svg" 
-	 viewBox="6.9 313 602.4 164" enable-background="new 6.9 313 602.4 164" xml:space="preserve">
+                   	<div class='positioning'>
+                 		 <svg class="svg" viewBox="6.9 313 602.4 164" preserveAspectRatio="xMinYMin meet">
 <path class="green" fill="#E9EAEB" d="M36.3,322.2c-29.9,15.5-49.7,130-0.9,144c69,19.8,279.6,6.6,332.3,6.6c58.3,0,151.3-0.6,210.6-4.3
 	c43.9-2.9,37.7-135.8-2.4-144.1c-62-12.9-161.9-9-233.2-8.9C239.8,315.7,66.3,306.7,36.3,322.2z"/>
 <path fill="none" stroke="#000000" stroke-width="2.3743" stroke-miterlimit="10" d="M79.1,347.8c-3.7,0.1-7.3,0.9-8.6,4.3
@@ -218,7 +334,7 @@ $(window).on('resize',function(){
 <path fill="none" stroke="#000000" stroke-width="9.4974" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M462.4,361.5c3.7,14.1,26.4,47.7,40.2,65.7c11.9-13.3,31.9-33.9,38.3-50.8"/>
 </svg>
- 
+						</div>
                    </div>
                     <div class="mobMore">
                             GREEN<br />
@@ -231,7 +347,79 @@ $(window).on('resize',function(){
                 </div>
                 <div class='wrapFade'>
                     <div class="button">
-                    <svg version="1.1" class="svg"  viewBox="5.9 573.6 602.8 161.1" enable-background="new 5.9 573.6 602.8 161.1" xml:space="preserve">
+
+
+<svg class="svg" viewBox="0 0 171.1 45.8" preserveAspectRatio="xMinYMin meet">
+
+<path fill="#E9E9EA" d="M165.2,42.6c8.3-4.3,8.8-35.6-4.8-39.5c-19.2-5.5-77.9-1.8-92.5-1.8c-16.2,0-42.1,0.2-58.6,1.2
+
+	C-3,3.2-2.9,45.1,8.5,45.7c20.9,1,46.5-3.8,66.3-3.8C103.5,41.8,156.8,46.9,165.2,42.6z"/>
+
+<path fill="#957992" stroke="#231F20" stroke-width="0.9294" stroke-miterlimit="10" d="M57.7,19.7c0.8-3.4-2.2-5.4-5.1-6.1
+
+	c-3.2-0.7-6.5-0.6-8.3,1.3c-1.7,3.5-1.3,7.7-1.3,12.1c0,1.7-0.3,3.9,0.3,5.5c1.2,3.6,9.3,3.4,11.9,2.2c2.2-1,2.3-4.6,0.9-6.7
+
+	c-1.4-2-3.6-3.3-6.1-3.1C53.1,24,56.8,23.5,57.7,19.7z M51.3,29.3c0.3,0.6,0.2,3.4-2.2,2.5c-2.2-0.8-2.4-3.9,0.4-3.5
+
+	C49.6,28.2,50.8,28.2,51.3,29.3z M51.9,20.5c-0.5,1.4-1.9,1.5-3.2,1.2c-3.4-0.7-1.3-4.4,1.4-4.3C51.3,17.7,52.3,19.2,51.9,20.5z"/>
+
+<path fill="#957992" stroke="#231F20" stroke-width="0.9294" stroke-miterlimit="10" d="M68.9,15.4c-8.3,3.4-6.3,21.3,2.8,20.1
+
+	C89.4,34.3,86.3,8.4,68.9,15.4z M74,27.7c-4.1,3.4-6.8-5.5-3.6-5.9l1.2-0.3c1.7-0.7,2.6-0.1,3.4,1.5C75.9,25,75.7,26.3,74,27.7z"/>
+
+<path fill="#957992" stroke="#231F20" stroke-width="0.9294" stroke-miterlimit="10" d="M90.6,17.3c-9.3,15.1,13.7,27.6,18,9.3
+
+	C110.7,17.9,94.9,9.1,90.6,17.3z M102.5,24.2l-0.5,1.1c-0.4,1.8-1.5,2.2-3.2,1.9c-2.1-0.3-3.1-1.3-3.3-3.6
+
+	C95.1,18.4,104.1,21.3,102.5,24.2z"/>
+
+<path fill="#957992" stroke="#231F20" stroke-width="0.9294" stroke-linejoin="round" stroke-miterlimit="10" d="M113.1,22.7
+
+	c-0.1,1.8,0.4,9.9,0.6,11.8c0.1,1.7,2.2,1,2.8,1.1c1.6,0.2,1.5-2.1,1.7-3.2c0.3-1.8-0.1-2.5-0.2-5c0.7,0.6,7.1,5.5,7.9,6.2
+
+	c0.6,0.5,3.4,1.8,4.1,1.3c0.5-0.3,0.9-1.6,0.9-2.1c0.3-2.5-2.7-3.9-4.3-4.9c-1.3-0.8-3.8-1.9-4.6-3.2c2.2-2.2,3.7-4.2,5.6-6.6
+
+	c0.8-1,1.6-3.5,0.5-4.3c-4.3-3.2-6.3,6.2-9.6,7.2c-0.4-1.9,0.1-4.1-0.1-6.1c-0.1-1.6-3.1-2.7-4.3-1.2
+
+	C113.1,15.6,113.2,20.4,113.1,22.7z"/>
+
+<path fill="none" stroke="#231F20" stroke-width="0.9294" stroke-linejoin="round" stroke-miterlimit="10" d="M10.6,13.2
+
+	c0,5.8-0.4,10.9,0.9,16.5c0.3,1.5,0.4,3.3,1,4.7c3.1-2,4.8-2.2,7.2-2.2c1.3,0,2.6-0.3,3.4,0.9c0.7,1.1,0.1,2.3,2,2.2
+
+	c1.1-0.1,2.2-1.3,2.3-2.4c3.2-1.3,5.9-0.7,9.6,2.4c-0.3-6.1-0.9-12,0-17.9c0.3-2.2-1.1-3.3-3.4-4.2c-1.6-0.6-4.3-0.7-6-0.3
+
+	c-1.9,0.4-1.1,1.4-2.4,2.5c-1.8,1.6-1.9-1.1-2.8-2c-1.4-1.4-5.3-0.8-7.1-0.9C13.4,12.5,12.1,12.2,10.6,13.2z"/>
+
+<path fill="none" stroke="#231F20" stroke-width="0.9294" stroke-linejoin="round" stroke-miterlimit="10" d="M24.5,15.8
+
+	c-1.8-1.3-4.5-2.3-6.7-2.4c-1.2,0-2.6-0.2-3.8,0c-0.7,0.1-1.3,0.6-2,0.8c-0.3,3.8,0,7.2,1.1,10.6c0.5,1.6,0.3,3.2,0.5,4.9
+
+	c0.2,1.4,0.1,1.3,1.3,1.2c0.7-0.1,1.4-0.7,2.2-0.8c1.2-0.2,2.6-0.1,3.8,0c2.1,0.1,3,0.7,3.8,2.5c0.1-2.2,0.3-4.2,0-6.3
+
+	c-0.2-1.7-0.4-3.2-0.7-4.8c-0.4-2-0.6-4-0.7-6c-2.1-0.4-4.2-0.9-6.3-0.6c-0.7,0.1-3,0.1-3.3,0.9c-0.2,0.5,0.8,2.7,0.9,3.4
+
+	c0.3,1.7,0.5,3.3,1,4.9c0.4,1.4,1.3,3.1,1.3,4.6c1.4,0.1,2.8-0.6,4.3-0.5c1.6,0.1,2.4,0.7,3.8,1.3l0.1-0.2c0.2-0.1,2.2-0.4,2.8-0.4
+
+	c0.8,0.1,4.1,0.3,4.9,0.3c0-0.9,0.1-1.6,0.1-2.5c0-2.8-0.2-5.5-0.4-8.2c0-0.3,0.1-1.3-0.2-1.5c-0.1-0.1-1.5-0.2-1.9-0.2
+
+	c-1.3,0-2.6,0.3-3.6,0.4c-0.7,0.1-3.1,0.6-3.3,0.9l-0.3-1c2-1.5,5-1.7,6.2-1.8c2.1-0.1,3.3,0.5,5.1,1.1c0.2,3.4-0.2,6.8,0.2,10.1
+
+	c0.3,2,0.7,3.4,0.7,5.4c-1.5-0.3-3.2-1.4-5.9-1.1c-2.5,0.3-3.3,1.3-4.9,2"/>
+
+<path fill="none" stroke="#231F20" stroke-width="3.7175" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+
+	M137.3,14.8c1,3.9,7.3,13.2,11.1,18.2c3.3-3.7,8.8-9.4,10.6-14"/>
+
+</svg>
+
+
+
+
+                    
+                    
+                    
+<!--                   	 <svg class="svg"  viewBox="5.9 573.6 602.8 161.1" preserveAspectRatio="xMinYMin meet">
 <path class="lila" fill="#E8E9EA" d="M588.5,723.3c29.3-15.2,31-125.3-16.9-139c-67.5-19.4-273.9-6.5-325.3-6.5c-57,0-148.1,0.6-206.3,4.3
 	c-43,2.7-42.6,150.3-2.5,152.2c73.5,3.5,163.6-13.2,233.3-13.4C371.8,720.7,559.2,738.5,588.5,723.3z"/>
 <path fill="#957992" stroke="#231F20" stroke-width="3.319" stroke-miterlimit="10" d="M210.4,643c2.8-11.8-7.9-18.9-18.1-21.3
@@ -264,7 +452,7 @@ $(window).on('resize',function(){
 	c0.7,11.9-0.8,23.9,0.7,35.5c0.9,6.9,2.4,12.1,2.5,19c-5.4-0.9-11.2-4.9-20.9-3.7c-8.8,1.1-11.6,4.4-17.3,6.9"/>
 <path fill="none" stroke="#231F20" stroke-width="13.2759" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M490.6,625.7c3.6,13.7,25.7,46.4,39.1,64c11.6-13,31-33.1,37.4-49.4"/>
-</svg>
+</svg>-->
                     </div>
                     <div class="bookMore">
                             IASAMNSFERI<br/>
@@ -273,7 +461,12 @@ $(window).on('resize',function(){
                  </div>
 			</div>    
     	</div>		
-     	<div class='wrapLeft'><img src="media/svg/sandro.svg"></div>
+     	<div class='wrapLeft'>
+        <img src="media/svg/sandro.svg" id='sandro-01'>
+       </div>
+       <div class='wrapLeft'>
+        <img src="media/svg/sandro-02.svg" id='sandro-02'>
+       </div>
     </div>
      
 	 
@@ -305,7 +498,7 @@ $(window).on('resize',function(){
                 </div>
                 <div class='wrapFade'>
                     <div class="button">
-                    <svg version="1.1" class="svg"  viewBox="5.9 573.6 602.8 161.1" enable-background="new 5.9 573.6 602.8 161.1" xml:space="preserve">
+                    	<svg version="1.1" class="svg"  viewBox="5.9 573.6 602.8 161.1" enable-background="new 5.9 573.6 602.8 161.1" xml:space="preserve">
 <path class="lila" fill="#E8E9EA" d="M588.5,723.3c29.3-15.2,31-125.3-16.9-139c-67.5-19.4-273.9-6.5-325.3-6.5c-57,0-148.1,0.6-206.3,4.3
 	c-43,2.7-42.6,150.3-2.5,152.2c73.5,3.5,163.6-13.2,233.3-13.4C371.8,720.7,559.2,738.5,588.5,723.3z"/>
 <path fill="#957992" stroke="#231F20" stroke-width="3.319" stroke-miterlimit="10" d="M210.4,643c2.8-11.8-7.9-18.9-18.1-21.3
@@ -357,7 +550,12 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                  </div>
 			</div>    
     	</div>		
-     	<div class='wrapLeft'><img src="media/svg/nukri.svg"></div>
+     	<div class='wrapLeft'>
+        <img src="media/svg/nukri.svg" id='nukri-01'>
+        </div>
+       <div class='wrapLeft'>
+        <img src="media/svg/nukri-02.svg" id='nukri-02'>
+        </div>
     </div>
     
 <!-- Mirian -->    
@@ -380,7 +578,7 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                   </div>
                <div class='wrapFade'>
                    <div class="button">
-                   <svg version="1.1" class="svg" 
+                  	<svg version="1.1" class="svg" 
 	 viewBox="6.9 313 602.4 164" enable-background="new 6.9 313 602.4 164" xml:space="preserve">
 <path class="green" fill="#E9EAEB" d="M36.3,322.2c-29.9,15.5-49.7,130-0.9,144c69,19.8,279.6,6.6,332.3,6.6c58.3,0,151.3-0.6,210.6-4.3
 	c43.9-2.9,37.7-135.8-2.4-144.1c-62-12.9-161.9-9-233.2-8.9C239.8,315.7,66.3,306.7,36.3,322.2z"/>
@@ -429,7 +627,12 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                  </div>
 			</div>    
     	</div>		
-     	<div class='wrapLeft'><img src="media/svg/mirian.svg"></div>
+     	<div class='wrapLeft'>
+        <img src="media/svg/mirian.svg" id='mirian-01'>
+        </div>
+        <div class='wrapLeft'>
+        <img src="media/svg/mirian-02.svg" id='mirian-02'>
+        </div>
     </div>
     
     
@@ -445,7 +648,7 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
 			<div class="contact">
 				<div class='wrapFade'>
                   <div class="button">
-	<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
+						<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
 	<path class="red" fill="#E9EAEB" d="M31,417.1c-29.9,15.5-49.7,130.1-0.8,144.2c69.1,19.8,280,6.7,332.6,6.7c89.8,0,275,49.1,246.2-95.5c-20.5-103-176-62.2-271.1-62.1C234.8,410.7,61,401.6,31,417.1z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M51.7,467.5c0,5.3-0.5,10.4-0.5,15.7c0,7.2-0.4,10.8,6.8,13c6.4,1.9,13.9,1.5,20.5,1.9c6.3,0.3,12.4,1.8,19.1,1.4c-0.1-4.9,1.5-10.1,1.5-15.1c0-5.4,0.3-11-0.1-16.4c-7.5-3.3-16.5-3.5-24.7-3.5C70.7,464.7,51.2,461.4,51.7,467.5z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M45.9,456c-2,3.1,0,10.9-0.9,14.9c-0.9,4.1-1.2,7.2-1.4,11.5c-0.4,6.7-2.3,13-1.8,20.1c4.3,2.3,10.5,0.7,15.1,1c7.7,0.6,15.2,3.5,23.1,3.9c8.4,0.4,16.6,0.6,25.1,0.5c1.5-3.6,1.3-11.1,1.4-15c0.1-4.1,0.6-7.8,0.9-11.8c0.7-6.6,1.1-13.2,0.9-20.1c-5.7-1.6-11-3.4-16.9-4c-5.9-0.6-11.9,0.5-17.8-0.6C65.3,454.9,54,452.3,45.9,456"/>
@@ -476,7 +679,7 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                   </div>
                <div class='wrapFade'>
                    <div class="button">
-                   <svg version="1.1" class="svg" 
+                   	<svg version="1.1" class="svg" 
 	 viewBox="6.9 313 602.4 164" enable-background="new 6.9 313 602.4 164" xml:space="preserve">
 <path class="green" fill="#E9EAEB" d="M36.3,322.2c-29.9,15.5-49.7,130-0.9,144c69,19.8,279.6,6.6,332.3,6.6c58.3,0,151.3-0.6,210.6-4.3
 	c43.9-2.9,37.7-135.8-2.4-144.1c-62-12.9-161.9-9-233.2-8.9C239.8,315.7,66.3,306.7,36.3,322.2z"/>
@@ -527,7 +730,12 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                  </div>
 			</div>    
     	</div>		
-     	<div class='wrapLeft'><img src="media/svg/vaxo.svg"></div>    
+     	<div class='wrapLeft'>
+        <img src="media/svg/vaxo.svg" id='vaxo-01'>
+       </div>
+       <div class='wrapLeft'>
+        <img src="media/svg/vaxo-02.svg" id='vaxo-02'>
+       </div>     
     </div>
     
 <!-- IT's -->    
@@ -543,7 +751,7 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
 			<div class="contact">
 				<div class='wrapFade'>
                   <div class="button">
-	<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
+						<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
 	<path class="red" fill="#E9EAEB" d="M31,417.1c-29.9,15.5-49.7,130.1-0.8,144.2c69.1,19.8,280,6.7,332.6,6.7c89.8,0,275,49.1,246.2-95.5c-20.5-103-176-62.2-271.1-62.1C234.8,410.7,61,401.6,31,417.1z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M51.7,467.5c0,5.3-0.5,10.4-0.5,15.7c0,7.2-0.4,10.8,6.8,13c6.4,1.9,13.9,1.5,20.5,1.9c6.3,0.3,12.4,1.8,19.1,1.4c-0.1-4.9,1.5-10.1,1.5-15.1c0-5.4,0.3-11-0.1-16.4c-7.5-3.3-16.5-3.5-24.7-3.5C70.7,464.7,51.2,461.4,51.7,467.5z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M45.9,456c-2,3.1,0,10.9-0.9,14.9c-0.9,4.1-1.2,7.2-1.4,11.5c-0.4,6.7-2.3,13-1.8,20.1c4.3,2.3,10.5,0.7,15.1,1c7.7,0.6,15.2,3.5,23.1,3.9c8.4,0.4,16.6,0.6,25.1,0.5c1.5-3.6,1.3-11.1,1.4-15c0.1-4.1,0.6-7.8,0.9-11.8c0.7-6.6,1.1-13.2,0.9-20.1c-5.7-1.6-11-3.4-16.9-4c-5.9-0.6-11.9,0.5-17.8-0.6C65.3,454.9,54,452.3,45.9,456"/>
@@ -586,7 +794,12 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                  </div>
 			</div>    
     	</div>		
-     	<div class='wrapLeft'><img src="media/svg/its.svg"></div>
+     	<div class='wrapLeft'>
+        <img src="media/svg/its.svg" id='its-01'>
+        </div>
+        <div class='wrapLeft'>
+        <img src="media/svg/its-02.svg" id='its-02'>
+        </div>
     </div>
     
 <!-- Levani-->    
@@ -603,7 +816,7 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
 			<div class="contact">
 				<div class='wrapFade'>
                   <div class="button">
-	<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
+						<svg class="svg" version="1.1" x="0px" y="0px" viewBox="0 396 612 186" enable-background="new 0 396 612 186"  >
 	<path class="red" fill="#E9EAEB" d="M31,417.1c-29.9,15.5-49.7,130.1-0.8,144.2c69.1,19.8,280,6.7,332.6,6.7c89.8,0,275,49.1,246.2-95.5c-20.5-103-176-62.2-271.1-62.1C234.8,410.7,61,401.6,31,417.1z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M51.7,467.5c0,5.3-0.5,10.4-0.5,15.7c0,7.2-0.4,10.8,6.8,13c6.4,1.9,13.9,1.5,20.5,1.9c6.3,0.3,12.4,1.8,19.1,1.4c-0.1-4.9,1.5-10.1,1.5-15.1c0-5.4,0.3-11-0.1-16.4c-7.5-3.3-16.5-3.5-24.7-3.5C70.7,464.7,51.2,461.4,51.7,467.5z"/>
 	<path fill="none" stroke="#231F20" stroke-width="3.34" stroke-miterlimit="10" d="M45.9,456c-2,3.1,0,10.9-0.9,14.9c-0.9,4.1-1.2,7.2-1.4,11.5c-0.4,6.7-2.3,13-1.8,20.1c4.3,2.3,10.5,0.7,15.1,1c7.7,0.6,15.2,3.5,23.1,3.9c8.4,0.4,16.6,0.6,25.1,0.5c1.5-3.6,1.3-11.1,1.4-15c0.1-4.1,0.6-7.8,0.9-11.8c0.7-6.6,1.1-13.2,0.9-20.1c-5.7-1.6-11-3.4-16.9-4c-5.9-0.6-11.9,0.5-17.8-0.6C65.3,454.9,54,452.3,45.9,456"/>
@@ -647,7 +860,12 @@ http://openuni.edu.ge/index.php?option=com_content&view=category&id=56
                  </div>
 			</div>    
     	</div>		
-     	<div class='wrapLeft'><img src="media/svg/levan.svg"></div>
+     	<div class='wrapLeft'>
+        <img src="media/svg/levan.svg" id='levan-01'>
+       </div>
+       <div class='wrapLeft'>
+        <img src="media/svg/levan-02.svg" id='levan-02'>
+       </div>
     </div>
     
  <!-- contact -->   
