@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -52,7 +52,29 @@ if (navigator.userAgent.indexOf('Mac OS X') != -1) {
 
 
 </script>
+<!--
 
+<script>
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+
+
+$(['media/svg/its-02.svg','media/svg/vaxo-02.svg','media/svg/its.svg','media/svg/vaxo.svg','media/svg/mirian-02.svg','media/svg/itsName.svg','media/svg/mirian.svg','media/svg/levan-02.svg','media/svg/nukri-02.svg','media/svg/nukri.svg','media/svg/levan.svg','media/svg/nameSandro.svg','media/svg/nameVaxo.svg','media/svg/sandro.svg','media/svg/sandro-01.svg','media/svg/sandro-02.svg','media/svg/nameNukri.svg','media/svg/nameMirian.svg','media/svg/levanName.svg','media/svg/logo.svg','media/svg/icon.svg']).preload();
+
+</script>
+-->
+<script>
+
+$(window).load(function() {
+	$('body').css('display','block');
+    $('body').show();
+	$('body').fadeIn(100);
+});
+</script>
 
 
    
